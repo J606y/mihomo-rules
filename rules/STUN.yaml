@@ -1,9 +1,10 @@
-# One-time copy from J606y/loon-rules; Mihomo classical YAML.
-# Routing action is assigned by the consuming RULE-SET.
+# WebRTC & STUN Leak Blocker (Port & Domain)
+# Recommended policy: REJECT
 payload:
-  - "AND,((NETWORK,UDP),(DST-PORT,3478))"
-  - "AND,((NETWORK,UDP),(DST-PORT,5349))"
-  - "DOMAIN-KEYWORD,stun"
-  - "DOMAIN-SUFFIX,stun.cloudflare.com"
-  - "DOMAIN-SUFFIX,stun.l.google.com"
-  - "DOMAIN-SUFFIX,stun.services.mozilla.com"
+  - DST-PORT,3478
+  - DST-PORT,5349
+  - DST-PORT,19302
+  - DOMAIN-KEYWORD,stun
+  - DOMAIN-SUFFIX,stun.cloudflare.com
+  - DOMAIN-SUFFIX,stun.l.google.com
+  - DOMAIN-SUFFIX,stun.services.mozilla.com
