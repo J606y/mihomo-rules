@@ -1,8 +1,5 @@
-# Mihomo classical AI rules, including STUN matches.
-# All entries use the policy assigned by the consuming RULE-SET.
+# Comprehensive AI Rules (Claude, OpenAI, Gemini, Perplexity, Cursor, Copilot)
 payload:
-  - "AND,((NETWORK,UDP),(DST-PORT,3478))"
-  - "AND,((NETWORK,UDP),(DST-PORT,5349))"
   - "DOMAIN-KEYWORD,stun"
   - "DOMAIN,ai.google.dev"
   - "DOMAIN,alkalicore-pa.clients6.google.com"
