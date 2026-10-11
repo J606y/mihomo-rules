@@ -1,26 +1,30 @@
-# Generated from J606y/loon-rules; do not edit by hand.
+# One-time copy from J606y/loon-rules; Mihomo classical YAML.
+# Routing action is assigned by the consuming RULE-SET.
 payload:
-  - DOMAIN-SUFFIX,ads-twitter.com
-  - DOMAIN-SUFFIX,cms-twdigitalassets.com
-  - DOMAIN-SUFFIX,periscope.tv
-  - DOMAIN-SUFFIX,pscp.tv
-  - DOMAIN-SUFFIX,t.co
-  - DOMAIN-SUFFIX,tellapart.com
-  - DOMAIN-SUFFIX,tweetdeck.com
-  - DOMAIN-SUFFIX,twimg.com
-  - DOMAIN-SUFFIX,twitpic.com
-  - DOMAIN-SUFFIX,twitter.biz
-  - DOMAIN-SUFFIX,twitter.com
-  - DOMAIN-SUFFIX,twitter.jp
-  - DOMAIN-SUFFIX,twitter.map.fastly.net
-  - DOMAIN-SUFFIX,twittercommunity.com
-  - DOMAIN-SUFFIX,twitterflightschool.com
-  - DOMAIN-SUFFIX,twitterinc.com
-  - DOMAIN-SUFFIX,twitteroauth.com
-  - DOMAIN-SUFFIX,twitterstat.us
-  - DOMAIN-SUFFIX,twtrdns.net
-  - DOMAIN-SUFFIX,twttr.com
-  - DOMAIN-SUFFIX,twttr.net
-  - DOMAIN-SUFFIX,twvid.com
-  - DOMAIN-SUFFIX,vine.co
-  - DOMAIN-SUFFIX,x.com
+  - "AND,((NETWORK,UDP),(DST-PORT,3478))"
+  - "AND,((NETWORK,UDP),(DST-PORT,5349))"
+  - "DOMAIN-KEYWORD,stun"
+  - "DOMAIN-SUFFIX,ads-twitter.com"
+  - "DOMAIN-SUFFIX,cms-twdigitalassets.com"
+  - "DOMAIN-SUFFIX,periscope.tv"
+  - "DOMAIN-SUFFIX,pscp.tv"
+  - "DOMAIN-SUFFIX,t.co"
+  - "DOMAIN-SUFFIX,tellapart.com"
+  - "DOMAIN-SUFFIX,tweetdeck.com"
+  - "DOMAIN-SUFFIX,twimg.com"
+  - "DOMAIN-SUFFIX,twitpic.com"
+  - "DOMAIN-SUFFIX,twitter.biz"
+  - "DOMAIN-SUFFIX,twitter.com"
+  - "DOMAIN-SUFFIX,twitter.jp"
+  - "DOMAIN-SUFFIX,twitter.map.fastly.net"
+  - "DOMAIN-SUFFIX,twittercommunity.com"
+  - "DOMAIN-SUFFIX,twitterflightschool.com"
+  - "DOMAIN-SUFFIX,twitterinc.com"
+  - "DOMAIN-SUFFIX,twitteroauth.com"
+  - "DOMAIN-SUFFIX,twitterstat.us"
+  - "DOMAIN-SUFFIX,twtrdns.net"
+  - "DOMAIN-SUFFIX,twttr.com"
+  - "DOMAIN-SUFFIX,twttr.net"
+  - "DOMAIN-SUFFIX,twvid.com"
+  - "DOMAIN-SUFFIX,vine.co"
+  - "DOMAIN-SUFFIX,x.com"
