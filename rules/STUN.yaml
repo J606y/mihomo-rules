@@ -1,0 +1,6 @@
+# Generated from J606y/loon-rules; do not edit by hand.
+payload:
+  - DOMAIN-KEYWORD,stun
+  - DOMAIN-SUFFIX,stun.cloudflare.com
+  - DOMAIN-SUFFIX,stun.l.google.com
+  - DOMAIN-SUFFIX,stun.services.mozilla.com
