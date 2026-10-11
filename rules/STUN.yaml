@@ -1,10 +1,10 @@
-# WebRTC & STUN Leak Blocker (Port & Domain)
-# Recommended policy: REJECT
+# Generated from authoritative upstreams (v2fly & MetaCubeX)
+# Category: STUN
 payload:
-  - DST-PORT,3478
-  - DST-PORT,5349
-  - DST-PORT,19302
-  - DOMAIN-KEYWORD,stun
-  - DOMAIN-SUFFIX,stun.cloudflare.com
-  - DOMAIN-SUFFIX,stun.l.google.com
-  - DOMAIN-SUFFIX,stun.services.mozilla.com
+  - "DOMAIN-KEYWORD,stun"
+  - "DOMAIN-SUFFIX,stun.cloudflare.com"
+  - "DOMAIN-SUFFIX,stun.l.google.com"
+  - "DOMAIN-SUFFIX,stun.services.mozilla.com"
+  - "DST-PORT,19302"
+  - "DST-PORT,3478"
+  - "DST-PORT,5349"
