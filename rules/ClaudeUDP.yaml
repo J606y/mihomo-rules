@@ -1,0 +1,16 @@
+# Mihomo classical provider: Claude UDP matches only.
+# Assign REJECT after the Claude proxy rule for unsupported-UDP fallback protection.
+# No routing policy is embedded. Process matching requires client support.
+payload:
+  - "AND,((NETWORK,UDP),(PROCESS-NAME,Claude.exe))"
+  - "AND,((NETWORK,UDP),(PROCESS-NAME,claude.exe))"
+  - "AND,((NETWORK,UDP),(DOMAIN-SUFFIX,anthropic.com))"
+  - "AND,((NETWORK,UDP),(DOMAIN-SUFFIX,anthropic.ai))"
+  - "AND,((NETWORK,UDP),(DOMAIN-SUFFIX,claude.ai))"
+  - "AND,((NETWORK,UDP),(DOMAIN-SUFFIX,claude.com))"
+  - "AND,((NETWORK,UDP),(DOMAIN-SUFFIX,claudeusercontent.com))"
+  - "AND,((NETWORK,UDP),(DOMAIN-SUFFIX,claude-code.com))"
+  - "AND,((NETWORK,UDP),(DOMAIN-SUFFIX,claude.dev))"
+  - "AND,((NETWORK,UDP),(DOMAIN-SUFFIX,clau.de))"
+  - "AND,((NETWORK,UDP),(DOMAIN-SUFFIX,claudemcpclient.com))"
+  - "AND,((NETWORK,UDP),(DOMAIN-SUFFIX,claudemcpcontent.com))"
