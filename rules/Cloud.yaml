@@ -411,6 +411,7 @@ payload:
   - "DOMAIN-SUFFIX,primevideo.info"
   - "DOMAIN-SUFFIX,primevideo.org"
   - "DOMAIN-SUFFIX,primevideo.tv"
+  - "DOMAIN-SUFFIX,pv-cdn.net"
   - "DOMAIN-SUFFIX,route53.cn"
   - "DOMAIN-SUFFIX,run.app"
   - "DOMAIN-SUFFIX,sagemaker.com.cn"
