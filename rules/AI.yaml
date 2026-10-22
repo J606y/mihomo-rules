@@ -109,3 +109,7 @@ payload:
   - "PROCESS-NAME,Claude.exe"
   - "PROCESS-NAME,Cursor.exe"
   - "PROCESS-NAME,claude.exe"
+  - "DOMAIN-SUFFIX,grok.com"
+  - "DOMAIN-SUFFIX,grokipedia.com"
+  - "DOMAIN-SUFFIX,x.ai"
+  - "DOMAIN,grok.x.com"
