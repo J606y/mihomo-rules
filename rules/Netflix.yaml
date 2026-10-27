@@ -1,7 +1,6 @@
 # Generated from authoritative upstreams (v2fly & MetaCubeX)
 # Category: Netflix
 payload:
-  - "DOMAIN,netflix.com.edgesuite.net"
   - "DOMAIN-REGEX,(^|\\.)apiproxy-device-prod-nlb-.+\\.amazonaws\\.com$"
   - "DOMAIN-REGEX,(^|\\.)apiproxy-website-nlb-prod-.+\\.amazonaws\\.com$"
   - "DOMAIN-REGEX,(^|\\.)dualstack\\.apiproxy-.+\\.amazonaws\\.com$"
