@@ -297,6 +297,7 @@ payload:
   - "DOMAIN,publicassets.cdn-apple.com"
   - "DOMAIN,publicassets.cdn-apple.com @cn"
   - "DOMAIN,push-apple.com.akadns.net"
+  - "DOMAIN,radio.itunes.apple.com"
   - "DOMAIN,s.mzstatic.com"
   - "DOMAIN,s.mzstatic.com @cn"
   - "DOMAIN,s1.mzstatic.com"
