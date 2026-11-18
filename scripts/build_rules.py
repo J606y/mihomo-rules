@@ -17,6 +17,11 @@ RULES_DIR = ROOT / "rules"
 
 # 抓取和汇聚定义
 TARGETS = {
+    "Claude": {
+        "v2": ["anthropic"],
+        "mc": ["anthropic"],
+        "extra": ["DOMAIN,http-intake.logs.us5.datadoghq.com"],
+    },
     "AI": {
         "v2": ["anthropic", "openai", "google-gemini"],
         "mc": ["anthropic", "openai", "google-gemini"],
@@ -88,6 +93,7 @@ TARGETS = {
         "extra": [
             "AND,((NETWORK,UDP),(PROCESS-NAME,Claude.exe))",
             "AND,((NETWORK,UDP),(PROCESS-NAME,claude.exe))",
+            "AND,((NETWORK,UDP),(DOMAIN,http-intake.logs.us5.datadoghq.com))",
             "AND,((NETWORK,UDP),(DOMAIN-SUFFIX,anthropic.com))",
             "AND,((NETWORK,UDP),(DOMAIN-SUFFIX,anthropic.ai))",
             "AND,((NETWORK,UDP),(DOMAIN-SUFFIX,claude.ai))",
@@ -123,10 +129,14 @@ def parse_rules(text: str) -> set[str]:
             line = line[2:].strip().strip("'\"")
             if "," in line:
                 parts = line.split(",")
-                rules.add(f"{parts[0].strip()},{parts[1].strip()}")
+                val = parts[1].split()[0].strip()
+                if val:
+                    rules.add(f"{parts[0].strip()},{val}")
                 continue
         if line.startswith("full:"):
-            rules.add(f"DOMAIN,{line[5:].strip()}")
+            val = line[5:].split()[0].strip()
+            if "." in val and not val.startswith("@"):
+                rules.add(f"DOMAIN,{val}")
         elif line.startswith("regexp:") or line.startswith("^") or line.startswith("include:"):
             continue
         else:
